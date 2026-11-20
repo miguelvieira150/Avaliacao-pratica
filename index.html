@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FutStats - Placar ao Vivo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>⚽ FutStats</h1>
+        <nav>
+            <a href="#placar">Placar ao Vivo</a>
+            <a href="#tabela">Tabela</a>
+            <a href="#novo-jogo">Registrar Jogo</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="placar" class="card">
+            <h2>Simulador de Partida</h2>
+            <div class="scoreboard">
+                <div class="team">
+                    <h3>Time da Casa</h3>
+                    <span id="gols-casa" class="score">0</span>
+                    <button onclick="alterarGol('casa', 1)">+ Gol</button>
+                </div>
+                <div class="versus">X</div>
+                <div class="team">
+                    <h3>Time Visitante</h3>
+                    <span id="gols-visitante" class="score">0</span>
+                    <button onclick="alterarGol('visitante', 1)">+ Gol</button>
+                </div>
+            </div>
+            <button class="btn-reset" onclick="zerarPlacar()">Zerar Placar</button>
+        </section>
