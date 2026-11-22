@@ -89,3 +89,59 @@ button:hover {
     background-color: #c62828;
     width: 100%;
 }
+
+.btn-reset:hover {
+    background-color: #8e0000;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #e8f5e9;
+}
+
+form {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    flex: 1;
+}
+
+#lista-jogos {
+    list-style: none;
+}
+
+#lista-jogos li {
+    background: #f9f9f9;
+    padding: 10px;
+    border-left: 4px solid #2e7d32;
+    margin-bottom: 8px;
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .scoreboard {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
