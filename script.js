@@ -30,3 +30,30 @@ const placarB = document.getElementById('placar-b').value;
 const timeB = document.getElementById('time-b').value;
 
 const resultadoTexto = `${timeA} ${placarA} x ${placarB} ${timeB}`;
+
+adicionarJogoNaTela(resultadoTexto);
+salvarJogoNoStorage(resultadoTexto);
+
+formJogo.reset();
+});
+
+function adicionarJogoNaTela(texto) {
+const li = document.createElement('li');
+li.innerText = texto;
+listaJogos.appendChild(li);
+}
+
+function salvarJogoNoStorage(texto) {
+let jogos = JSON.parse(localStorage.getItem('meusJogos')) || [];
+jogos.push(texto);
+localStorage.setItem('meusJogos', JSON.stringify(jogos));
+}
+
+function carregarJogosSalvos() {
+let jogos = JSON.parse(localStorage.getItem('meusJogos')) || [];
+jogos.forEach(function(jogo) {
+adicionarJogoNaTela(jogo);
+});
+}
+
+carregarJogosSalvos();
